@@ -1,5 +1,6 @@
 <div align="center">
-  <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/event-accepted--v1.png" width="70"/>
+  <img src="<img width="1024" height="1024" alt="HappenHub logo" src="https://github.com/user-attachments/assets/979b9cef-1f14-4a52-b0ef-6014693f27d8" />
+" width="70"/>
   <h1>🎉 HappenHub</h1>
   <p><i>Your local event discovery and booking platform.</i></p>
 
