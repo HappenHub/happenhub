@@ -1,6 +1,9 @@
 <div align="center">
-  <img src="<img width="1024" height="1024" alt="HappenHub logo" src="https://github.com/user-attachments/assets/979b9cef-1f14-4a52-b0ef-6014693f27d8" />
-" width="70"/>
+  <img 
+    src="https://github.com/user-attachments/assets/979b9cef-1f14-4a52-b0ef-6014693f27d8" 
+    alt="HappenHub Logo" 
+    width="110"
+  />
   <h1>🎉 HappenHub</h1>
   <p><i>Your local event discovery and booking platform.</i></p>
 
@@ -14,6 +17,10 @@
 
 ---
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/bab992f8-7418-48d1-81f2-72ce1fcbdb0e" width="60%" alt="gradient divider"/>
+</p>
+
 ## 🚀 About the Project
 
 **HappenHub** is a modern web app that helps users discover, book, and manage local events effortlessly.  
@@ -21,14 +28,14 @@ It offers two different login systems — one for **Users** and another for **Or
 
 ---
 
-## 🧩 Features
+## 🌟 Features
 
-✅ User & Organiser login  
-✅ Account creation with validation  
-✅ “Forgot Password” & Google Sign-in option  
-✅ Responsive & minimal UI  
-✅ Route-based navigation  
-✅ Scalable folder structure for future updates  
+- ✅ User & Organiser login  
+- ✅ Account creation with validation  
+- ✅ “Forgot Password” & Google Sign-in  
+- ✅ Responsive & minimal UI  
+- ✅ Route-based navigation  
+- ✅ Scalable folder structure  
 
 ---
 
@@ -48,10 +55,10 @@ It offers two different login systems — one for **Users** and another for **Or
 ## 🛠️ Installation & Setup
 
 ```bash
-# Clone the repo
+# Clone the repository
 git clone https://github.com/jahnavi-patil/happenhub.git
 
-# Move into the project folder
+# Navigate to project folder
 cd happenhub-frontend
 
 # Install dependencies
