@@ -17,10 +17,6 @@
 
 ---
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/bab992f8-7418-48d1-81f2-72ce1fcbdb0e" width="60%" alt="gradient divider"/>
-</p>
-
 ## 🚀 About the Project
 
 **HappenHub** is a modern web app that helps users discover, book, and manage local events effortlessly.  
