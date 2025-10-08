@@ -19,8 +19,14 @@
 
 ## 🚀 About the Project
 
-**HappenHub** is a modern web app that helps users discover, book, and manage local events effortlessly.  
-It offers two different login systems — one for **Users** and another for **Organisers**, each with its own dashboard.
+**Discover. Connect. Experience. 🌟**  
+**HappenHub** is your go-to hub for finding and sharing amazing events — from concerts to community meetups.  
+Built with **Java Spring Boot** and **MongoDB** for seamless performance and scalability.
+
+**HappenHub** is a smart event discovery platform where organizers can share upcoming events and users can explore experiences based on mood, location, or keywords.  
+It offers features like **event booking, reminders, volunteer registration**, and **travel integration** — all within one dynamic ecosystem.
+
+It provides two separate dashboards — one for **Users** and another for **Organisers** — with personalized experiences for each.
 
 ---
 
