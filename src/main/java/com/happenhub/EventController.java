@@ -40,10 +40,11 @@ public class EventController {
 
 
     // Get all events
-    @GetMapping("/all")
+    @GetMapping({"", "/all"})
     public List<Event> getAllEvents() {
         return eventRepository.findAll();
     }
+
 
     // Get events by organizer email
     @GetMapping("/organizer/{email}")
