@@ -24,7 +24,7 @@ const EventCard = ({ title, date, mood, location, imageUrl, description, price, 
           <span className="flex items-center gap-1">📅 {new Date(date).toLocaleDateString()}</span>
         </div>
         <div className="flex justify-between items-center mt-4">
-          {price && <span className="text-red-700 font-bold text-lg">${price}</span>}
+            {price && <span className="text-red-700 font-bold text-lg">₹{price.toLocaleString('en-IN')}</span>}
           <Link 
             to={`/event/${id}`}
             className="px-4 py-2 bg-red-700 text-white rounded-lg hover:bg-red-800 transition-colors duration-300"
