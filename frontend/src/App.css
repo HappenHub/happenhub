@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.event-card {
+  @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300;
+}
+
+.search-bar {
+  @apply w-full px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary;
+}
+
+.mood-filter {
+  @apply flex flex-wrap gap-2 mb-6;
+}
+
+.mood-btn {
+  @apply px-4 py-2 rounded-full border border-gray-300 hover:border-primary hover:bg-primary hover:text-white transition-colors;
+}
+
+.mood-btn.selected {
+  @apply bg-primary text-white border-primary;
+}
+
+.form-card {
+  @apply bg-white p-8 rounded-lg shadow-lg max-w-md mx-auto;
+}
+
+.input-field {
+  @apply w-full px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary;
+}
+
+.btn-primary {
+  @apply w-full bg-primary text-white py-2 rounded-lg hover:bg-accent transition-colors font-semibold;
+}
+
+.btn-google {
+  @apply w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition-colors font-semibold mt-4;
+}
+
+.text-link {
+  @apply text-primary hover:text-accent underline;
+}
+
+.dashboard-stats {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8;
+}
+
+.stat-card {
+  @apply bg-white p-6 rounded-lg shadow-md text-center;
+}
+
+footer {
+  @apply bg-gray-100 py-6 px-4 mt-12;
+}
+
+.footer-links {
+  @apply flex justify-center gap-8 mt-4;
+}
+
+.footer-links a {
+  @apply text-gray-600 hover:text-primary transition-colors;
+}
