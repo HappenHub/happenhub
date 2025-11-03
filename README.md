@@ -78,12 +78,4 @@ Before running the project, ensure you have the following installed:
 - **MongoDB** (v4.4 or higher)  
 - **Maven** (v3.8 or higher)  
 
----
 
-## 🛠️ Installation & Setup
-
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/atharvpatil18/happenhub.git
-cd happenhub
