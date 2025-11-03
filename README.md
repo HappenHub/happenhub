@@ -1,582 +1,89 @@
-# HappenHub - Event Management Platform# HappenHub - Event Management Platform# HappenHub - Event Management Platform
+# 🎉 HappenHub – Event Management Platform
 
-
-
-A full-stack event discovery and booking platform built with React and Spring Boot.
-
-
-
----A full-stack event discovery and booking platform built with React and Spring Boot.A
-
-
-
-## 🚀 About the Project
+A **full-stack event discovery and booking platform** built with **React** and **Spring Boot**.
 
 ---
 
-**Discover. Connect. Experience. 🌟**  
-
 ## 🚀 About the Project
 
-**HappenHub** is a comprehensive event management platform that connects event organizers with attendees. Built with modern technologies including React, Spring Boot, and MongoDB, it provides seamless event discovery, booking, and management capabilities.
+**Discover. Connect. Experience. 🌟**
 
-**Discover. Connect. Experience. 🌟**  
+**HappenHub** is a comprehensive event management platform that connects event organizers with attendees.  
+Built with modern technologies like **React**, **Spring Boot**, and **MongoDB**, it provides seamless event discovery, booking, and management capabilities.
 
-### Key Highlights
+---
 
-- 📅 **Browse Events** by mood, location, and date**HappenHub** is a comprehensive event management platform that connects event organizers with attendees. Built with modern technologies including React, Spring Boot, and MongoDB, it provides seamless event discovery, booking, and management capabilities.
+### ✨ Key Highlights
 
-- 🎟️ **Real-time Ticket Booking** with availability tracking
+- 📅 **Browse Events** by mood, location, and date  
+- 🎟️ **Real-time Ticket Booking** with availability tracking  
+- 👥 **Dual Dashboards** for Users and Organizers  
+- 📊 **Analytics Dashboard** for organizers (revenue, attendance, tickets sold)  
+- 💰 **INR Currency** support with Indian number formatting  
+- 🔐 **JWT Authentication** for secure access  
 
-- 👥 **Dual Dashboards** for Users and Organizers### Key Highlights
-
-- 📊 **Analytics Dashboard** for organizers (revenue, attendance, tickets sold)- 📅 **Browse Events** by mood, location, and date
-
-- 💰 **INR Currency** support with Indian number formatting- 🎟️ **Real-time Ticket Booking** with availability tracking
-
-- 🔐 **JWT Authentication** for secure access- 👥 **Dual Dashboards** for Users and Organizers
-
-- 📊 **Analytics Dashboard** for organizers (revenue, attendance, tickets sold)
-
----- 💰 **INR Currency** support with Indian number formatting
-
-- 🔐 **JWT Authentication** for secure access
+---
 
 ## 🌟 Features
 
+### 👤 For Users
+
+- ✅ Browse and discover events  
+- ✅ Filter by mood, date, and location  
+- ✅ Book tickets with real-time availability  
+- ✅ Manage profile and view booking history  
+- ✅ Track upcoming and past events  
+
+### 🧑‍💼 For Event Organizers
+
+- ✅ Create and manage events easily  
+- ✅ Edit event details (capacity, price, description)  
+- ✅ Dashboard with analytics and insights  
+- ✅ Track revenue, attendance, and ticket sales  
+- ✅ Real-time updates on ticket availability  
+
 ---
-
-### For Users
-
-- ✅ Browse and discover events## 🌟 Features
-
-- ✅ Filter by mood and location
-
-- ✅ Book tickets with real-time availability### For Users
-
-- ✅ User profile management- ✅ Browse and discover events
-
-- ✅ View booking history- ✅ Filter by mood and location
-
-- ✅ Track upcoming events- ✅ Book tickets with real-time availability
-
-- ✅ User profile management
-
-### For Event Organizers- ✅ View booking history
-
-- ✅ Create and manage events- ✅ Track upcoming events
-
-- ✅ Edit event details (capacity, price, description)
-
-- ✅ Dashboard with analytics### For Event Organizers
-
-- ✅ Revenue and attendance tracking- ✅ Create and manage events
-
-- ✅ Real-time ticket availability updates- ✅ Edit event details (capacity, price, description)
-
-- ✅ Delete/manage events- ✅ Dashboard with analytics
-
-- ✅ Revenue and attendance tracking
-
----- ✅ Real-time ticket availability updates
-
-- ✅ Delete/manage events
 
 ## ⚙️ Tech Stack
 
----
+### 🖥️ Frontend
 
-### Frontend
-
-| Technology | Version |## ⚙️ Tech Stack
-
-|-----------|-------------|
-
-| **React** | 18.x |### Frontend
-
-| **Vite** | 4.5.x || Technology | Version |
-
-| **React Router** | 6.x ||-----------|-------------|
-
-| **Tailwind CSS** | 3.x || **React** | 18.x |
-
-| **Context API** | State Management || **Vite** | 4.5.x |
-
-| **Lucide React** | Icons || **React Router** | 6.x |
-
+| Technology | Version |
+|-------------|----------|
+| **React** | 18.x |
+| **Vite** | 4.5.x |
+| **React Router** | 6.x |
 | **Tailwind CSS** | 3.x |
+| **Context API** | State Management |
+| **Lucide React** | Icons |
 
-### Backend| **Context API** | State Management |
+### ⚙️ Backend
 
-| Technology | Version || **Lucide React** | Icons |
-
-|-----------|-------------|
-
-| **Spring Boot** | 3.2.3 |### Backend
-
-| **Java** | 17 || Technology | Version |
-
-| **MongoDB** | 4.4+ ||-----------|-------------|
-
-| **Spring Security** | JWT Auth || **Spring Boot** | 3.2.3 |
-
-| **Maven** | 3.8+ || **Java** | 17 |
-
+| Technology | Version |
+|-------------|----------|
+| **Spring Boot** | 3.2.3 |
+| **Java** | 17 |
 | **MongoDB** | 4.4+ |
-
----| **Spring Security** | JWT Auth |
-
+| **Spring Security (JWT)** | Auth & Roles |
 | **Maven** | 3.8+ |
 
-## 📋 Prerequisites
-
 ---
-
-Before running this project, ensure you have:
 
 ## 📋 Prerequisites
 
-- **Node.js** (v16 or higher)
+Before running the project, ensure you have the following installed:
 
-- **Java JDK** 17Before running this project, ensure you have:
-
-- **MongoDB** (v4.4 or higher)
-
-- **Maven** (v3.8 or higher)- **Node.js** (v16 or higher)
-
-- **Java JDK** 17
-
----- **MongoDB** (v4.4 or higher)
-
-- **Maven** (v3.8 or higher)
-
-## 🛠️ Installation & Setup
+- **Node.js** (v16 or higher)  
+- **Java JDK** (v17)  
+- **MongoDB** (v4.4 or higher)  
+- **Maven** (v3.8 or higher)  
 
 ---
 
-### 1. Clone the Repository
-
 ## 🛠️ Installation & Setup
+
+### 1️⃣ Clone the Repository
 
 ```bash
-
-git clone https://github.com/HappenHub/happenhub.git### 1. Clone the Repository
-
-cd happenhub
-
-``````bash
-
 git clone https://github.com/atharvpatil18/happenhub.git
-
-### 2. Backend Setupcd happenhub
-
-```
-
-```bash
-
-# Navigate to backend directory### 2. Backend Setup
-
-cd backend
-
-```bash
-
-# Start MongoDB (if not running)# Navigate to backend directory
-
-# Windowscd backend
-
-net start MongoDB
-
-# macOS/Linux# Start MongoDB (if not running)
-
-sudo systemctl start mongod# Windows
-
-net start MongoDB
-
-# Run the backend# macOS/Linux
-
-./mvnw spring-boot:runsudo systemctl start mongod
-
-# Or on Windows
-
-mvnw.cmd spring-boot:run# Run the backend
-
-```./mvnw spring-boot:run
-
-# Or on Windows
-
-Backend will start on `http://localhost:8080`mvnw.cmd spring-boot:run
-
-```
-
-### 3. Frontend Setup
-
-Backend will start on `http://localhost:8080`
-
-```bash
-
-# Navigate to frontend directory### 3. Frontend Setup
-
-cd ../frontend
-
-```bash
-
-# Install dependencies# Navigate to frontend directory
-
-npm installcd ../frontend
-
-
-
-# Create .env file (copy from .env.example)# Install dependencies
-
-# Windowsnpm install
-
-copy .env.example .env
-
-# macOS/Linux# Create .env file (copy from .env.example)
-
-cp .env.example .env# Windows
-
-copy .env.example .env
-
-# Start development server# macOS/Linux
-
-npm run devcp .env.example .env
-
-```
-
-# Start development server
-
-Frontend will start on `http://localhost:5173`npm run dev
-
-```
-
----
-
-Frontend will start on `http://localhost:5174`
-
-## 🔐 Environment Variables
-
----
-
-### Frontend (.env)
-
-## 🔐 Environment Variables
-
-```env
-
-VITE_API_BASE_URL=http://localhost:8080/api### Frontend (.env)
-
-```
-
-```env
-
-### Backend (application.properties)VITE_API_BASE_URL=http://localhost:8080/api
-
-```
-
-```properties
-
-spring.data.mongodb.uri=mongodb://localhost:27017/happenhub### Backend (application.properties)
-
-spring.data.mongodb.database=happenhub
-
-server.port=8080```properties
-
-jwt.secret=OQwh9iPXK9hQnSmjCveSRLhJxBY0gRFZAnteZctLOmhqGRSz3WJ0spring.data.mongodb.uri=mongodb://localhost:27017/happenhub
-
-jwt.expiration=3600000spring.data.mongodb.database=happenhub
-
-```server.port=8080
-
-```
-
----
-
----
-
-## 📱 Usage
-
-## 📱 Usage
-
-### Creating an Account
-
-### Creating an Account
-
-1. Click **Sign Up** in the navigation
-
-2. Choose account type:1. Click **Sign Up** in the navigation
-
-   - **User** - For booking events2. Choose account type:
-
-   - **Organizer** - For creating and managing events   - **User** - For booking events
-
-3. Fill in your details (name, email, password)   - **Organizer** - For creating and managing events
-
-4. Login with your credentials3. Fill in your details (name, email, password)
-
-4. Login with your credentials
-
-### For Organizers
-
-### For Organizers
-
-1. **Create Events**: Navigate to Dashboard → Create New Event
-
-2. **Manage Events**: Edit details, update capacity, change prices1. **Create Events**: Navigate to Dashboard → Create New Event
-
-3. **Track Performance**: View revenue (₹), tickets sold, and attendance rates2. **Manage Events**: Edit details, update capacity, change prices
-
-4. **Monitor Capacity**: Real-time progress bars show tickets sold vs available3. **Track Performance**: View revenue (₹), tickets sold, and attendance rates
-
-4. **Monitor Capacity**: Real-time progress bars show tickets sold vs available
-
-### For Users
-
-### For Users
-
-1. **Browse Events**: View all events on home page
-
-2. **Filter**: Use mood filters to find relevant events1. **Browse Events**: View all events on home page
-
-3. **Book Tickets**: Select event → Choose quantity → Confirm booking2. **Filter**: Use mood filters to find relevant events
-
-4. **View Profile**: Check booking history and manage account3. **Book Tickets**: Select event → Choose quantity → Confirm booking
-
-4. **View Profile**: Check booking history and manage account
-
----
-
----
-
-## 🗂️ Project Structure
-
-## 🗂️ Project Structure
-
-```
-
-happenhub/```
-
-├── backend/                    # Spring Boot Backendhappenhub/
-
-│   ├── src/main/java/com/happenhub/├── backend/                    # Spring Boot Backend
-
-│   │   ├── config/            # Security, CORS, MongoDB config│   ├── src/main/java/com/happenhub/
-
-│   │   ├── controller/        # REST API Controllers│   │   ├── config/            # Security, CORS, MongoDB config
-
-│   │   ├── model/             # Entity models (Event, User, Booking)│   │   ├── controller/        # REST API Controllers
-
-│   │   ├── repository/        # MongoDB repositories│   │   ├── model/             # Entity models (Event, User, Booking)
-
-│   │   ├── security/          # JWT filters and auth│   │   ├── repository/        # MongoDB repositories
-
-│   │   ├── service/           # Business logic│   │   ├── security/          # JWT filters and auth
-
-│   │   └── util/              # Helper classes│   │   ├── service/           # Business logic
-
-│   ├── src/main/resources/│   │   └── util/              # Helper classes
-
-│   │   └── application.properties│   ├── src/main/resources/
-
-│   ├── pom.xml│   │   └── application.properties
-
-│   └── mvnw.cmd│   ├── pom.xml
-
-││   └── mvnw.cmd
-
-├── frontend/                   # React Frontend│
-
-│   ├── src/├── frontend/                   # React Frontend
-
-│   │   ├── components/        # Reusable components│   ├── src/
-
-│   │   │   ├── Navbar.jsx│   │   ├── components/        # Reusable components
-
-│   │   │   ├── EventCard.jsx│   │   │   ├── Navbar.jsx
-
-│   │   │   ├── BookingForm.jsx│   │   │   ├── EventCard.jsx
-
-│   │   │   └── ...│   │   │   ├── BookingForm.jsx
-
-│   │   ├── context/           # Auth context│   │   │   └── ...
-
-│   │   ├── pages/             # Route pages│   │   ├── context/           # Auth context
-
-│   │   │   ├── Home.jsx│   │   ├── pages/             # Route pages
-
-│   │   │   ├── Dashboard.jsx│   │   │   ├── Home.jsx
-
-│   │   │   ├── EventDetails.jsx│   │   │   ├── Dashboard.jsx
-
-│   │   │   └── ...│   │   │   ├── EventDetails.jsx
-
-│   │   ├── utils/             # API helpers│   │   │   └── ...
-
-│   │   └── App.jsx│   │   ├── utils/             # API helpers
-
-│   ├── .env.example│   │   └── App.jsx
-
-│   ├── package.json│   ├── .env.example
-
-│   ├── tailwind.config.js│   ├── package.json
-
-│   └── vite.config.js│   ├── tailwind.config.js
-
-││   └── vite.config.js
-
-├── Dockerfile                 # Docker configuration│
-
-└── README.md├── Dockerfile                 # Docker configuration
-
-```└── README.md
-
-```
-
----
-
----
-
-## 📊 Key Features Explained
-
-## 📊 Key Features Explained
-
-### Real-time Ticket Availability
-
-- Live ticket count updates after each booking### Real-time Ticket Availability
-
-- Automatic decrement of `availableTickets`- Live ticket count updates after each booking
-
-- Sold-out status when capacity reached- Automatic decrement of `availableTickets`
-
-- Backend ensures data consistency- Sold-out status when capacity reached
-
-- Backend ensures data consistency
-
-### Smart Capacity Management
-
-- Organizers can update event capacity anytime### Smart Capacity Management
-
-- System preserves already sold tickets- Organizers can update event capacity anytime
-
-- Progress bar shows percentage filled- System preserves already sold tickets
-
-- Formula: `(capacity - availableTickets) / capacity * 100`- Progress bar shows percentage filled
-
-- Formula: `(capacity - availableTickets) / capacity * 100`
-
-### Dashboard Analytics (Organizers)
-
-- **Total Revenue**: ₹ calculated from all ticket sales### Dashboard Analytics (Organizers)
-
-- **Tickets Sold**: Sum of `(capacity - availableTickets)` across all events- **Total Revenue**: ₹ calculated from all ticket sales
-
-- **Average Attendance**: Overall capacity filled percentage- **Tickets Sold**: Sum of `(capacity - availableTickets)` across all events
-
-- **Event Count**: Total events created by organizer- **Average Attendance**: Overall capacity filled percentage
-
-- Indian number formatting with `toLocaleString('en-IN')`- **Event Count**: Total events created by organizer
-
-- Indian number formatting with `toLocaleString('en-IN')`
-
-### Currency System
-
-- All prices in Indian Rupees (₹)### Currency System
-
-- Consistent formatting across platform- All prices in Indian Rupees (₹)
-
-- Number formatting: `₹1,23,456` (Indian locale)- Consistent formatting across platform
-
-- Number formatting: `₹1,23,456` (Indian locale)
-
----
-
----
-
-## 📄 API Endpoints
-
-## 📄 API Endpoints
-
-### Authentication
-
-```### Authentication
-
-POST /api/users/signup       - User registration```
-
-POST /api/users/login        - User loginPOST /api/users/signup       - User registration
-
-POST /api/organizers/signup  - Organizer registrationPOST /api/users/login        - User login
-
-POST /api/organizers/login   - Organizer loginPOST /api/organizers/signup  - Organizer registration
-
-```POST /api/organizers/login   - Organizer login
-
-```
-
-### Events
-
-```### Events
-
-GET    /api/events/all           - Get all events```
-
-GET    /api/events/{id}          - Get event by IDGET    /api/events/all           - Get all events
-
-POST   /api/events/create        - Create event (organizer only)GET    /api/events/{id}          - Get event by ID
-
-PUT    /api/events/update/{id}   - Update event (organizer only)POST   /api/events/create        - Create event (organizer only)
-
-DELETE /api/events/delete/{id}   - Delete event (organizer only)PUT    /api/events/update/{id}   - Update event (organizer only)
-
-```DELETE /api/events/delete/{id}   - Delete event (organizer only)
-
-```
-
-### Bookings
-
-```### Bookings
-
-POST /api/bookings/create        - Create booking```
-
-GET  /api/bookings/user          - Get user's bookingsPOST /api/bookings/create        - Create booking
-
-PUT  /api/bookings/cancel/{id}   - Cancel bookingGET  /api/bookings/user          - Get user's bookings
-
-```PUT  /api/bookings/cancel/{id}   - Cancel booking
-
-```
-
----
-
----
-
-## 🤝 Contributing
-
-## 🤝 Contributing
-
-1. Fork the repository
-
-2. Create feature branch: `git checkout -b feature/amazing-feature`1. Fork the repository
-
-3. Commit changes: `git commit -m 'Add amazing feature'`2. Create feature branch: `git checkout -b feature/amazing-feature`
-
-4. Push to branch: `git push origin feature/amazing-feature`3. Commit changes: `git commit -m 'Add amazing feature'`
-
-5. Submit a Pull Request4. Push to branch: `git push origin feature/amazing-feature`
-
-5. Submit a Pull Request
-
----
-
----
-
-## 📧 Contact
-
-#   A d d i t i o n a l   i m p r o v e m e n t 
-
-**Project Link**: [https://github.com/HappenHub/happenhub](https://github.com/HappenHub/happenhub) 
-
- 
----
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
+cd happenhub
