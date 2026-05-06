@@ -92,9 +92,20 @@ function EventDetails() {
       </div>
     );
 
-  const hasTicketsAvailable = event.availableTickets > 0;
+  const availableTickets = event.availableTickets ?? 100;
+  const capacity = event.capacity ?? 100;
+  const hasTicketsAvailable = availableTickets > 0;
   const isOrganizer =
     user && user.role === 'ORGANIZER' && user.email === event.organizerEmail;
+
+  const displayEmoji = (() => {
+    const m = event.mood;
+    const c = event.category;
+    if (!m) return '✨';
+    if (!/[a-zA-Z]/.test(m)) return m;
+    const map = { 'Party': '🎉', 'Tech': '💻', 'Art': '🎨', 'Music': '🎵', 'Outdoor': '🏞️', 'Food': '🍕', 'Wellness': '🧘', 'Comedy': '😂', 'Sports': '🏃', 'chill': '😌', 'productive': '💻', 'fun': '🎉' };
+    return map[c] || map[m.toLowerCase()] || '✨';
+  })();
 
   return (
     <div className="min-h-screen bg-red-50 py-8">
@@ -116,7 +127,7 @@ function EventDetails() {
         <div className="p-8">
           <div className="flex items-center justify-between mb-6">
             <h1 className="text-3xl font-bold text-red-900">{event.title}</h1>
-            <span className="text-4xl">{event.mood}</span>
+            <span className="text-4xl" title={event.category || event.mood}>{displayEmoji}</span>
           </div>
 
           {/* Event Info Grid */}
@@ -150,9 +161,9 @@ function EventDetails() {
                 <div>
                   <p className="text-sm text-gray-500">Ticket Price</p>
                   <p className="text-gray-900 font-bold text-lg">
-                    {event.price === 0
+                    {(!event.price || event.price === 0)
                       ? 'FREE'
-                      : `₹${event.price.toFixed(2)}`}
+                      : `₹${Number(event.price || 0).toFixed(2)}`}
                   </p>
                 </div>
               </div>
@@ -169,7 +180,7 @@ function EventDetails() {
                     }`}
                   >
                     {hasTicketsAvailable
-                      ? `${event.availableTickets} / ${event.capacity} tickets available`
+                      ? `${availableTickets} / ${capacity} tickets available`
                       : 'SOLD OUT'}
                   </p>
                 </div>
@@ -239,13 +250,13 @@ function EventDetails() {
                     htmlFor="numberOfTickets"
                     className="block text-gray-700 font-medium mb-2"
                   >
-                    Number of Tickets (Max: {event.availableTickets})
+                    Number of Tickets (Max: {availableTickets})
                   </label>
                   <input
                     type="number"
                     id="numberOfTickets"
                     min="1"
-                    max={event.availableTickets}
+                    max={availableTickets}
                     value={bookingData.numberOfTickets}
                     onChange={(e) =>
                       setBookingData((prev) => ({
@@ -284,7 +295,7 @@ function EventDetails() {
                   <div className="flex justify-between mb-2">
                     <span className="text-gray-600">Ticket Price:</span>
                     <span className="font-medium">
-                      ₹{event.price.toFixed(2)}
+                      ₹{Number(event.price || 0).toFixed(2)}
                     </span>
                   </div>
                   <div className="flex justify-between mb-2">
@@ -298,7 +309,7 @@ function EventDetails() {
                       Total Amount:
                     </span>
                     <span className="text-red-700 font-bold text-xl">
-                      ₹{calculateTotal().toFixed(2)}
+                      ₹{Number(calculateTotal() || 0).toFixed(2)}
                     </span>
                   </div>
                 </div>

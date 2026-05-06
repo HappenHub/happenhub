@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context";
 import { api } from "../utils/api";
@@ -33,8 +33,8 @@ const Dashboard = () => {
     const fetchEvents = async () => {
       try {
         setLoading(true);
-  // backend expects organizer email, pass user.email
-  const response = await api.events.getByOrganizer(user.email);
+  // backend expects organizer id, pass user.id
+  const response = await api.events.getByOrganizer(user.id);
         
         const currentDate = new Date();
         const categorizedEvents = response.map(event => ({

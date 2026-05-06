@@ -14,11 +14,11 @@ function MoodFilter({ selectedMood, setSelectedMood }) {
       {moods.map(mood => (
         <button
           key={mood.emoji}
-          onClick={() => setSelectedMood(selectedMood === mood.emoji ? '' : mood.emoji)}
+          onClick={() => setSelectedMood(selectedMood === mood.label ? '' : mood.label)}
           className={`
             px-4 py-2 rounded-full flex items-center gap-2 
             transition-all duration-300 text-sm font-medium
-            ${selectedMood === mood.emoji 
+            ${selectedMood === mood.label 
               ? 'bg-[#FFB5A7] text-black shadow-lg transform scale-105' 
               : 'bg-white text-black hover:bg-[#FFB5A7]'
             }

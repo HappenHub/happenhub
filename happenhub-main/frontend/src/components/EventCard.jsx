@@ -1,7 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const EventCard = ({ title, date, mood, location, imageUrl, description, price, id, tags }) => {
+const EventCard = ({ title, date, mood, category, location, imageUrl, description, price, id, tags }) => {
+  const displayEmoji = React.useMemo(() => {
+    if (!mood) return '✨';
+    if (!/[a-zA-Z]/.test(mood)) return mood;
+    const map = { 'Party': '🎉', 'Tech': '💻', 'Art': '🎨', 'Music': '🎵', 'Outdoor': '🏞️', 'Food': '🍕', 'Wellness': '🧘', 'Comedy': '😂', 'Sports': '🏃', 'chill': '😌', 'productive': '💻', 'fun': '🎉' };
+    return map[category] || map[mood.toLowerCase()] || '✨';
+  }, [mood, category]);
+
   return (
     <div className="event-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
       <img 
@@ -15,7 +22,7 @@ const EventCard = ({ title, date, mood, location, imageUrl, description, price, 
       />
       <div className="p-4">
         <div className="flex items-center gap-2 mb-2">
-          <span className="text-2xl">{mood}</span>
+          <span className="text-2xl" title={category || mood}>{displayEmoji}</span>
           <h3 className="text-xl font-bold text-red-800">{title}</h3>
         </div>
         {description && <p className="text-gray-700 mb-2">{description}</p>}

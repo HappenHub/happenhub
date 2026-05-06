@@ -28,7 +28,8 @@ const handleResponse = async (response) => {
       throw e;
     }
   }
-  return response.json();
+  const result = await response.json();
+  return result.data !== undefined ? result.data : result;
 };
 
 const checkServer = async () => {
@@ -45,7 +46,7 @@ export const api = {
   // Event APIs
   events: {
     getAll: (filters = {}) => 
-      fetch(`${API_BASE_URL}/events/all?${new URLSearchParams(filters)}`, {
+      fetch(`${API_BASE_URL}/events?${new URLSearchParams(filters)}`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -57,7 +58,7 @@ export const api = {
 
     // Get events for a specific organizer
     getByOrganizer: (organizerId) =>
-      fetch(`${API_BASE_URL}/events/organizer/${organizerId}`, {
+      fetch(`${API_BASE_URL}/events/creator/${organizerId}`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -95,7 +96,7 @@ export const api = {
   // Auth APIs
   auth: {
     login: (type, data) => 
-      timeoutFetch(`${API_BASE_URL}/${type === 'users' ? 'users' : 'organizers'}/login`, {
+      timeoutFetch(`${API_BASE_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
@@ -106,9 +107,15 @@ export const api = {
           throw new Error(error.message || 'Login failed');
         }
         const result = await response.json();
+        const authData = result.data;
         return {
-          token: result.token,
-          user: result.user
+          token: authData.token,
+          user: {
+            id: authData.userId,
+            name: authData.name,
+            email: authData.email,
+            role: authData.role === 'BUSINESS' ? 'ORGANIZER' : authData.role
+          }
         };
       })
       .catch(err => {
@@ -125,26 +132,32 @@ export const api = {
       }).then(handleResponse).catch(() => null)
 
     ,
-    signup: (type, data) => 
-      timeoutFetch(`${API_BASE_URL}/${type === 'users' ? 'users' : 'organizers'}/signup`, {
+    signup: (type, data) => {
+      const payload = {
+        name: `${data.firstName || ''} ${data.lastName || ''}`.trim() || data.name,
+        email: data.email,
+        password: data.password,
+        role: type === 'organizers' ? 'BUSINESS' : 'USER'
+      };
+      return timeoutFetch(`${API_BASE_URL}/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
         credentials: 'include'
       }).then(async (response) => {
         if (!response.ok) {
-          const text = await response.text();
-          throw new Error(text.includes('❌') ? text.replace('❌ ', '') : 'Signup failed');
+          const error = await response.json();
+          throw new Error(error.message || 'Signup failed');
         }
-        const text = await response.text();
-        return text.includes('✅') ? { message: text.replace('✅ ', '') } : { message: 'Signup successful' };
+        return await response.json();
       })
       .catch(err => {
         if (err.name === 'AbortError') {
           throw new Error('Request timed out. Please try again.');
         }
         throw err;
-      })
+      });
+    }
   },
 
   // Booking APIs

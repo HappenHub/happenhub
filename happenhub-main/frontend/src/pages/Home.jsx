@@ -29,7 +29,11 @@ function Home() {
 
   const filteredEvents = events.filter(event => {
     const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesMood = selectedMood ? event.mood === selectedMood : true;
+    const matchesMood = selectedMood 
+      ? (event.category === selectedMood || 
+         event.mood === selectedMood || 
+         (event.category && event.category.toLowerCase() === selectedMood.toLowerCase()))
+      : true;
     const matchesLocation = locationTerm ? event.location.toLowerCase().includes(locationTerm.toLowerCase()) : true;
     return matchesSearch && matchesMood && matchesLocation;
   });
@@ -74,6 +78,7 @@ function Home() {
                 title={event.title}
                 date={event.date}
                 mood={event.mood}
+                category={event.category}
                 location={event.location}
                 imageUrl={event.imageUrl}
                 description={event.description}
